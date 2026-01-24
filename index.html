@@ -740,7 +740,7 @@ A comprehensive sales store dashboard highlighting overall performance through K
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1487860/t/13"></script> -->
 	
 	<!-- https://script.google.com/macros/s/AKfycbyJC-EFCPZ5FouJxFPjtpZzxXOMcNgsM9SmwsCAfE-3xWq6xL_w4C03gOxjPj4ZhCqh/exec	 -->
-		<div style="text-align:center; margin-top:20px;">
+		<!-- <div style="text-align:center; margin-top:20px;">
   <h3>👀 Visitors Count</h3>
   <div id="liveUsers" style="font-size:34px; font-weight:bold; color:#ffc107;">
     Loading...
@@ -764,8 +764,25 @@ async function fetchLiveUsers(){
 fetchLiveUsers();
 setInterval(fetchLiveUsers, 10000);
 </script>
+	</div> -->
+	
+	<div style="text-align:center; margin-top:20px;">
+	<div id="totalVisitors">👀 Total Visitors: Loading...</div></div>
+	<script>
+fetch("https://script.google.com/macros/s/AKfycbyKl12N9DierquyL-yOCsZLHOVH3917CfEdJqX3eefRWp_HVEOMR1XkDvWnTeME58Mg/exec")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("totalVisitors").innerText =
+      "👀 Total Visitors: " + data.totalVisitors;
+  })
+  .catch(() => {
+    document.getElementById("totalVisitors").innerText =
+      "👀 Total Visitors: N/A";
+  });
+</script>
+
+
 	</div>
-   </div>
  </section>
 
 
