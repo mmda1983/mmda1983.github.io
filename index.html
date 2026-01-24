@@ -740,12 +740,17 @@ A comprehensive sales store dashboard highlighting overall performance through K
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1487860/t/13"></script> -->
 	
 	<!-- https://script.google.com/macros/s/AKfycbyJC-EFCPZ5FouJxFPjtpZzxXOMcNgsM9SmwsCAfE-3xWq6xL_w4C03gOxjPj4ZhCqh/exec	 -->
-		<!-- <div style="text-align:center; margin-top:20px;">
-  <h3>👀 Visitors Count</h3>
+		<div style="text-align:center; margin-top:20px;">
+  <!-- <h1>🟢 Live Now:</h1> -->
+   <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+	<li class="ftco-animate normal-txt"><h1>🟢 Live Now: </h1> </li>
+   <li>
   <div id="liveUsers" style="font-size:34px; font-weight:bold; color:#ffc107;">
     Loading...
-  </div>
-</div>
+  </div></li></ul></div>
+  <!-- <div id="liveUsers" style="text-align:center; margin-top:20px;">🟢 Live Now: </div> -->
+
+
 
 		<script>
 async function fetchLiveUsers(){
@@ -764,15 +769,23 @@ async function fetchLiveUsers(){
 fetchLiveUsers();
 setInterval(fetchLiveUsers, 10000);
 </script>
-	</div> -->
+	<!-- </div>
 	
-	<div id="totalVisitors">👀 Total Visitors: Loading...</div>
+	<div id="totalVisitors">👀 Total Visitors: Loading...</div> -->
+			<div style="text-align:center; margin-top:20px;">
+  <!-- <h1>🟢 Live Now:</h1> -->
+   <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+	<li class="ftco-animate normal-txt"><h1>👀Total Visitors:</h1> </li>
+   <li>
+  <div id="totalVisitors" style="font-size:34px; font-weight:bold; color:#ffc107;">
+    Loading...
+  </div></li></ul></div>
 	<script>
 fetch("https://script.google.com/macros/s/AKfycbx6tGSIz-5c8Sw5QTV0IbzNUHkMBAZ9-zga_Q3S_nQmxfzcVOJywEEZNHEKMlNa0MFh/exec")
   .then(res => res.json())
   .then(data => {
     document.getElementById("totalVisitors").innerText =
-      "👀 Total Visitors: " + data.totalVisitors;
+      "" + data.totalVisitors;
   })
   .catch(() => {
     document.getElementById("totalVisitors").innerText =
