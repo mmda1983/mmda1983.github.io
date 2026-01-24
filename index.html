@@ -729,19 +729,35 @@ A comprehensive sales store dashboard highlighting overall performance through K
   <!-- ===== Stylish Visitor Counter ===== -->
   <div style="text-align:center; margin-top:20px;">
     <h3>👀 Visitors Count</h3>
-    <span>
+    <span></span>
+  </div>
       <!-- Free Visitor Counter Embed -->
       <!-- <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7f7c50eb68287b5719b849a3d89c0d3ce6dd6df9'></script>
       <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/7f7c50eb68287b5719b849a3d89c0d3ce6dd6df9/t/0"></script> -->
-		 <a href='https://free-hit-counters.net/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=ace106aae7fd22f575d42eb1c6f4af60e6b4cc0e'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1487866/t/13"></script>	
+		 <!-- <a href='https://free-hit-counters.net/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=ace106aae7fd22f575d42eb1c6f4af60e6b4cc0e'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1487866/t/13"></script>	 -->
 	  <!-- <a href='https://www.counters-free.net/'>Hit Counters free</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7f7c50eb68287b5719b849a3d89c0d3ce6dd6df9'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1487860/t/13"></script> -->
-	</span>
-  </div>
+	
+	<!-- https://script.google.com/macros/s/AKfycbyJC-EFCPZ5FouJxFPjtpZzxXOMcNgsM9SmwsCAfE-3xWq6xL_w4C03gOxjPj4ZhCqh/exec	 -->
+		<script>
+async function fetchLiveUsers(){
+  try{
+    const res = await fetch("https://script.google.com/macros/s/AKfycbyJC-EFCPZ5FouJxFPjtpZzxXOMcNgsM9SmwsCAfE-3xWq6xL_w4C03gOxjPj4ZhCqh/exec");
+    const data = await res.json();
 
+    document.getElementById("liveUsers").innerText =
+      data.rows?.[0]?.metricValues?.[0]?.value || 0;
 
-		   </div>
+  }catch(err){
+    document.getElementById("liveUsers").innerText = "—";
+  }
+}
+
+fetchLiveUsers();
+setInterval(fetchLiveUsers, 10000);
+</script>
+	</div>
    </div>
  </section>
 
