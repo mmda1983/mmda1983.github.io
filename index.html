@@ -780,16 +780,14 @@ setInterval(fetchLiveUsers, 10000);
   <div id="totalVisitors" style="font-size:34px; font-weight:bold; color:#ffc107;">
     Loading...
   </div></li></ul></div>
-	<script>
-fetch("https://script.google.com/macros/s/AKfycbx6tGSIz-5c8Sw5QTV0IbzNUHkMBAZ9-zga_Q3S_nQmxfzcVOJywEEZNHEKMlNa0MFh/exec")
+<script>
+fetch("https://script.google.com/macros/s/AKfycbyKl12N9DierquyL-yOCsZLHOVH3917CfEdJqX3eefRWp_HVEOMR1XkDvWnTeME58Mg/exec")
   .then(res => res.json())
   .then(data => {
-    document.getElementById("totalVisitors").innerText =
-      "" + data.totalVisitors;
+    document.getElementById("totalVisitors").innerText = data.totalUsers;
   })
   .catch(() => {
-    document.getElementById("totalVisitors").innerText =
-      "👀 Total Visitors: N/A";
+    document.getElementById("totalVisitors").innerText = "Error";
   });
 </script>
 
