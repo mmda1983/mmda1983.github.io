@@ -781,10 +781,10 @@ setInterval(fetchLiveUsers, 10000);
     Loading...
   </div></li></ul></div>
 <script>
-fetch("https://script.google.com/macros/s/AKfycbyKl12N9DierquyL-yOCsZLHOVH3917CfEdJqX3eefRWp_HVEOMR1XkDvWnTeME58Mg/exec")
+fetch("https://script.google.com/macros/s/AKfycbyOKEGr29pqhdqaUtob6YQabDZAMbzDyxhL8j8876dFScHSTH3UoqTR050E9NYqfW6Q/exec")
   .then(res => res.json())
   .then(data => {
-    document.getElementById("totalVisitors").innerText = data.totalUsers;
+    document.getElementById("totalVisitors").innerText = data.totalVisitors;
   })
   .catch(() => {
     document.getElementById("totalVisitors").innerText = "Error";
