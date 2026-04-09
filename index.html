@@ -777,17 +777,23 @@ setInterval(fetchLiveUsers, 10000);
    <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 	<li class="ftco-animate normal-txt"><h1>👀Total Visitors:</h1> </li>
    <li>
-  <div id="totalVisitors" style="font-size:34px; font-weight:bold; color:#ffc107;">
+  <div id="totalUsers" style="font-size:34px; font-weight:bold; color:#ffc107;">
     Loading...
   </div></li></ul></div>
+<!-- <h3>
+  👀 Total Visitors: <span id="totalUsers">Loading...</span>
+</h3> -->
+
 <script>
 fetch("https://script.google.com/macros/s/AKfycbyOKEGr29pqhdqaUtob6YQabDZAMbzDyxhL8j8876dFScHSTH3UoqTR050E9NYqfW6Q/exec")
-  .then(res => res.json())
+  .then(response => response.json())
   .then(data => {
-    document.getElementById("totalVisitors").innerText = data.totalVisitors;
+    console.log("DATA:", data); // debug
+    document.getElementById("totalUsers").innerText = data.totalUsers;
   })
-  .catch(() => {
-    document.getElementById("totalVisitors").innerText = "Error";
+  .catch(error => {
+    console.error(error);
+    document.getElementById("totalUsers").innerText = "Error";
   });
 </script>
 
