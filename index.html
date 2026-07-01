@@ -1,841 +1,1371 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Mukesh Meena Portfolio</title>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0VXECXELQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-S0VXECXELQ');
-</script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mukesh Meena | AI SaaS Builder & Full Stack Developer</title>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0VXECXELQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-S0VXECXELQ');
+	</script>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<style>
+		:root {
+			--qm: #6366f1;
+			--qm-light: #818cf8;
+			--sc: #f78166;
+			--sc-light: #ffaa99;
+			--bg: #0a0a0f;
+			--bg2: #111118;
+			--bg3: #1a1a2e;
+			--text: #e2e8f0;
+			--text-muted: #94a3b8;
+			--border: #2a2a3e;
+			--grad: linear-gradient(135deg, #6366f1, #f78166);
+		}
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-    <link rel="stylesheet" href="css/aos.css">
+		html {
+			scroll-behavior: smooth;
+		}
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+		body {
+			font-family: 'Inter', sans-serif;
+			background: var(--bg);
+			color: var(--text);
+			overflow-x: hidden;
+		}
 
+		/* SCROLLBAR */
+		::-webkit-scrollbar {
+			width: 6px;
+		}
 
+		::-webkit-scrollbar-track {
+			background: var(--bg);
+		}
 
-<style>
+		::-webkit-scrollbar-thumb {
+			background: var(--qm);
+			border-radius: 3px;
+		}
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+		/* NAV */
+		nav {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1000;
+			background: rgba(10, 10, 15, 0.9);
+			backdrop-filter: blur(12px);
+			border-bottom: 1px solid var(--border);
+			padding: 16px 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+		.nav-logo {
+			font-size: 20px;
+			font-weight: 800;
+			background: var(--grad);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+		.nav-links {
+			display: flex;
+			gap: 32px;
+			list-style: none;
+		}
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+		.nav-links a {
+			color: var(--text-muted);
+			text-decoration: none;
+			font-size: 14px;
+			font-weight: 500;
+			transition: color 0.2s;
+		}
 
+		.nav-links a:hover {
+			color: var(--text);
+		}
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+		.nav-cta {
+			background: var(--grad);
+			color: #fff;
+			padding: 8px 20px;
+			border-radius: 8px;
+			text-decoration: none;
+			font-size: 13px;
+			font-weight: 600;
+		}
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
+		/* HERO */
+		#home {
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			padding: 100px 40px 60px;
+			max-width: 1200px;
+			margin: 0 auto;
+			gap: 60px;
+		}
 
+		.hero-left {
+			flex: 1;
+		}
 
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
+		.hero-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			background: rgba(99, 102, 241, 0.1);
+			border: 1px solid rgba(99, 102, 241, 0.3);
+			padding: 6px 14px;
+			border-radius: 20px;
+			font-size: 12px;
+			color: var(--qm-light);
+			margin-bottom: 24px;
+		}
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
+		.hero-badge span {
+			width: 6px;
+			height: 6px;
+			background: #22c55e;
+			border-radius: 50%;
+			animation: pulse 2s infinite;
+		}
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
+		@keyframes pulse {
 
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
+			0%,
+			100% {
+				opacity: 1;
+			}
 
+			50% {
+				opacity: 0.3;
+			}
+		}
 
-/* project image zoom effect */
+		.hero-left h1 {
+			font-size: 56px;
+			font-weight: 800;
+			line-height: 1.1;
+			margin-bottom: 16px;
+		}
 
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
+		.hero-left h1 .grad {
+			background: var(--grad);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
+		.hero-subtitle {
+			font-size: 20px;
+			color: var(--text-muted);
+			margin-bottom: 16px;
+		}
 
+		.hero-desc {
+			font-size: 15px;
+			color: var(--text-muted);
+			line-height: 1.8;
+			margin-bottom: 32px;
+			max-width: 500px;
+		}
 
-</style>
+		.typing-wrap {
+			font-family: 'Fira Code', monospace;
+			font-size: 16px;
+			color: var(--sc);
+			margin-bottom: 32px;
+		}
 
+		.hero-btns {
+			display: flex;
+			gap: 16px;
+			flex-wrap: wrap;
+		}
 
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Mukesh Meena</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+		.btn-primary-grad {
+			background: var(--grad);
+			color: #fff;
+			padding: 12px 28px;
+			border-radius: 10px;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+			transition: transform 0.2s, box-shadow 0.2s;
+		}
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-			  <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Cover Letter</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Very Good Morning!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Mukesh Meena</span></h1>
+		.btn-primary-grad:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+		}
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+		.btn-outline {
+			border: 1px solid var(--border);
+			color: var(--text);
+			padding: 12px 28px;
+			border-radius: 10px;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+			transition: border-color 0.2s;
+		}
 
-						<script>
+		.btn-outline:hover {
+			border-color: var(--qm);
+			color: var(--qm-light);
+		}
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+		/* HERO RIGHT - TOOLS MOCKUP */
+		.hero-right {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
 
-						// Create an array of typing text
-						const typingTexts = [
-						'IT Engineer   ',
-						// 'YouTuber  ',
-						'Home Tutor    ',
-						];
+		.tool-card {
+			background: var(--bg3);
+			border-radius: 16px;
+			padding: 24px;
+			border: 1px solid var(--border);
+			transition: transform 0.3s, box-shadow 0.3s;
+			position: relative;
+			overflow: hidden;
+		}
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+		.tool-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 2px;
+		}
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
+		.tool-card.qm::before {
+			background: var(--qm);
+		}
 
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
+		.tool-card.sc::before {
+			background: var(--sc);
+		}
 
-						</script>
+		.tool-card:hover {
+			transform: translateY(-4px);
+		}
 
-						<br>
-						<br>
-			            <h2> A Home Tutor</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://github.com/mmda1983" class="btn btn-primary py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
+		.tool-card.qm:hover {
+			box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+		}
 
+		.tool-card.sc:hover {
+			box-shadow: 0 12px 40px rgba(247, 129, 102, 0.2);
+		}
 
+		.tool-header {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin-bottom: 12px;
+		}
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Mukesh Meena</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Home Tutor</span></p>
-										<p><span class="title-s">Experience: </span> <span>More than 5 years in Teaching Field</span></p>
-										<p><span class="title-s">Address: </span> <span>Rajasthan, India</span></p>
-									  </div>
-									</div>
-								  </div>
+		.tool-icon {
+			font-size: 28px;
+		}
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>AI Tools and ChatGPT</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									<span>SQL using AI</span> <span class="pull-right">81%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									<span>SQL</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">81%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 81%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">94%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 94%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Statistical Analysis</span> <span class="pull-right">71%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 71%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<!-- <span>Machine Learning</span> <span class="pull-right">80%</span> -->
-									<!-- <div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> -->
+		.tool-name {
+			font-size: 18px;
+			font-weight: 700;
+		}
+
+		.tool-card.qm .tool-name {
+			color: var(--qm-light);
+		}
+
+		.tool-card.sc .tool-name {
+			color: var(--sc-light);
+		}
+
+		.tool-desc {
+			font-size: 13px;
+			color: var(--text-muted);
+			margin-bottom: 14px;
+			line-height: 1.6;
+		}
+
+		.tool-tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 6px;
+			margin-bottom: 16px;
+		}
+
+		.tag {
+			padding: 3px 10px;
+			border-radius: 20px;
+			font-size: 11px;
+			font-weight: 500;
+		}
+
+		.qm .tag {
+			background: rgba(99, 102, 241, 0.15);
+			color: var(--qm-light);
+		}
+
+		.sc .tag {
+			background: rgba(247, 129, 102, 0.15);
+			color: var(--sc-light);
+		}
+
+		.tool-live {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			padding: 7px 16px;
+			border-radius: 8px;
+			text-decoration: none;
+			font-size: 12px;
+			font-weight: 600;
+		}
+
+		.qm .tool-live {
+			background: var(--qm);
+			color: #fff;
+		}
+
+		.sc .tool-live {
+			background: var(--sc);
+			color: #fff;
+		}
+
+		.tool-live:hover {
+			opacity: 0.9;
+		}
+
+		/* STATS */
+		.stats-bar {
+			background: var(--bg2);
+			border-top: 1px solid var(--border);
+			border-bottom: 1px solid var(--border);
+			padding: 40px;
+			display: flex;
+			justify-content: center;
+			gap: 80px;
+			flex-wrap: wrap;
+		}
+
+		.stat {
+			text-align: center;
+		}
+
+		.stat-num {
+			font-size: 36px;
+			font-weight: 800;
+			background: var(--grad);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.stat-label {
+			font-size: 13px;
+			color: var(--text-muted);
+			margin-top: 4px;
+		}
+
+		/* SECTION */
+		section {
+			padding: 80px 40px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.section-tag {
+			font-size: 12px;
+			color: var(--qm-light);
+			font-weight: 600;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin-bottom: 12px;
+		}
+
+		.section-title {
+			font-size: 36px;
+			font-weight: 800;
+			margin-bottom: 8px;
+		}
+
+		.section-sub {
+			font-size: 15px;
+			color: var(--text-muted);
+			margin-bottom: 48px;
+		}
+
+		/* SKILLS */
+		.skills-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 20px;
+		}
+
+		.skill-group {
+			background: var(--bg2);
+			border: 1px solid var(--border);
+			border-radius: 14px;
+			padding: 24px;
+		}
+
+		.skill-group h4 {
+			font-size: 14px;
+			font-weight: 600;
+			color: var(--qm-light);
+			margin-bottom: 16px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.skill-item {
+			margin-bottom: 14px;
+		}
+
+		.skill-item-top {
+			display: flex;
+			justify-content: space-between;
+			font-size: 13px;
+			margin-bottom: 6px;
+		}
+
+		.skill-bar {
+			height: 4px;
+			background: var(--border);
+			border-radius: 2px;
+			overflow: hidden;
+		}
+
+		.skill-fill {
+			height: 100%;
+			border-radius: 2px;
+			background: var(--grad);
+			transition: width 1s ease;
+		}
+
+		/* PROJECTS */
+		.projects-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+			gap: 24px;
+		}
+
+		.project-card {
+			background: var(--bg2);
+			border: 1px solid var(--border);
+			border-radius: 14px;
+			overflow: hidden;
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
+
+		.project-card:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15);
+		}
+
+		.project-img {
+			height: 160px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 48px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.project-img.powerbi {
+			background: linear-gradient(135deg, #1a1a2e, #16213e);
+		}
+
+		.project-img.python {
+			background: linear-gradient(135deg, #1a2e1a, #162116);
+		}
+
+		.project-img.sql {
+			background: linear-gradient(135deg, #2e1a1a, #211616);
+		}
+
+		.project-img.saas-qm {
+			background: linear-gradient(135deg, #1a1a2e, #0f0f23);
+		}
+
+		.project-img.saas-sc {
+			background: linear-gradient(135deg, #2e1a15, #1a0f0a);
+		}
+
+		.project-body {
+			padding: 20px;
+		}
+
+		.project-type {
+			font-size: 11px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			margin-bottom: 8px;
+		}
+
+		.project-title {
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+
+		.project-desc {
+			font-size: 13px;
+			color: var(--text-muted);
+			line-height: 1.6;
+			margin-bottom: 16px;
+		}
+
+		.project-links {
+			display: flex;
+			gap: 10px;
+		}
+
+		.project-link {
+			padding: 6px 14px;
+			border-radius: 6px;
+			font-size: 12px;
+			font-weight: 600;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+
+		.link-primary {
+			background: var(--qm);
+			color: #fff;
+		}
+
+		.link-secondary {
+			border: 1px solid var(--border);
+			color: var(--text-muted);
+		}
+
+		.link-sc {
+			background: var(--sc);
+			color: #fff;
+		}
+
+		/* ABOUT */
+		.about-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 48px;
+			align-items: start;
+		}
+
+		.about-text p {
+			font-size: 15px;
+			color: var(--text-muted);
+			line-height: 1.8;
+			margin-bottom: 16px;
+		}
+
+		.about-info-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 12px;
+			margin-top: 24px;
+		}
+
+		.info-item {
+			background: var(--bg2);
+			border: 1px solid var(--border);
+			border-radius: 10px;
+			padding: 14px;
+		}
+
+		.info-label {
+			font-size: 11px;
+			color: var(--text-muted);
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: 4px;
+		}
+
+		.info-value {
+			font-size: 13px;
+			font-weight: 600;
+		}
+
+		.about-highlights {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		.highlight-card {
+			background: var(--bg2);
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			padding: 20px;
+			display: flex;
+			gap: 16px;
+		}
+
+		.highlight-icon {
+			font-size: 24px;
+		}
+
+		.highlight-title {
+			font-size: 14px;
+			font-weight: 700;
+			margin-bottom: 4px;
+		}
+
+		.highlight-desc {
+			font-size: 13px;
+			color: var(--text-muted);
+		}
+
+		/* CONTACT */
+		.contact-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 48px;
+		}
+
+		.contact-info {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		.contact-item {
+			background: var(--bg2);
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+
+		.contact-icon {
+			width: 44px;
+			height: 44px;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			flex-shrink: 0;
+		}
+
+		.contact-icon.email {
+			background: rgba(99, 102, 241, 0.15);
+			color: var(--qm-light);
+		}
+
+		.contact-icon.phone {
+			background: rgba(247, 129, 102, 0.15);
+			color: var(--sc-light);
+		}
+
+		.contact-icon.linkedin {
+			background: rgba(10, 102, 194, 0.15);
+			color: #0a66c2;
+		}
+
+		.contact-icon.github {
+			background: rgba(255, 255, 255, 0.1);
+			color: #fff;
+		}
+
+		.contact-label {
+			font-size: 11px;
+			color: var(--text-muted);
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		.contact-val {
+			font-size: 14px;
+			font-weight: 600;
+			text-decoration: none;
+			color: var(--text);
+		}
+
+		.contact-val:hover {
+			color: var(--qm-light);
+		}
+
+		.resume-box {
+			background: var(--bg3);
+			border: 1px solid var(--border);
+			border-radius: 14px;
+			padding: 32px;
+			text-align: center;
+		}
+
+		.resume-box h3 {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+
+		.resume-box p {
+			font-size: 14px;
+			color: var(--text-muted);
+			margin-bottom: 24px;
+		}
+
+		.resume-btns {
+			display: flex;
+			gap: 12px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.resume-btn {
+			padding: 10px 24px;
+			border-radius: 8px;
+			text-decoration: none;
+			font-size: 13px;
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.resume-btn.primary {
+			background: var(--grad);
+			color: #fff;
+		}
+
+		.resume-btn.secondary {
+			border: 1px solid var(--border);
+			color: var(--text-muted);
+		}
+
+		/* FOOTER */
+		footer {
+			border-top: 1px solid var(--border);
+			padding: 32px 40px;
+			text-align: center;
+			color: var(--text-muted);
+			font-size: 13px;
+		}
+
+		footer .footer-grad {
+			background: var(--grad);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: 700;
+		}
+
+		/* MOBILE */
+		@media (max-width: 768px) {
+			nav {
+				padding: 14px 20px;
+			}
+
+			.nav-links {
+				display: none;
+			}
+
+			#home {
+				flex-direction: column;
+				padding: 80px 20px 40px;
+				gap: 40px;
+			}
+
+			.hero-left h1 {
+				font-size: 36px;
+			}
+
+			.stats-bar {
+				gap: 40px;
+				padding: 32px 20px;
+			}
+
+			section {
+				padding: 60px 20px;
+			}
+
+			.about-grid,
+			.contact-grid {
+				grid-template-columns: 1fr;
+				gap: 32px;
+			}
+
+			.about-info-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.projects-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		/* GLOW EFFECT */
+		.glow-qm {
+			position: absolute;
+			width: 300px;
+			height: 300px;
+			background: rgba(99, 102, 241, 0.08);
+			border-radius: 50%;
+			filter: blur(60px);
+			top: -100px;
+			right: -100px;
+			pointer-events: none;
+		}
+
+		.glow-sc {
+			position: absolute;
+			width: 300px;
+			height: 300px;
+			background: rgba(247, 129, 102, 0.08);
+			border-radius: 50%;
+			filter: blur(60px);
+			bottom: -100px;
+			left: -100px;
+			pointer-events: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- NAV -->
+	<nav>
+		<div class="nav-logo">MM</div>
+		<ul class="nav-links">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+		<a href="#contact" class="nav-cta">Hire Me</a>
+	</nav>
+
+	<!-- HERO -->
+	<div style="position:relative; overflow:hidden;">
+		<div class="glow-qm"></div>
+		<div style="max-width:1200px; margin:0 auto;">
+			<section id="home" style="padding-top:120px;">
+				<div class="hero-left">
+					<div class="hero-badge">
+						<span></span> Available for opportunities
+					</div>
+					<h1>I'm <span class="grad">Mukesh</span><br>Meena</h1>
+					<div class="typing-wrap" id="typing">$ AI SaaS Builder_</div>
+					<p class="hero-desc">
+						Full Stack Developer & AI SaaS Builder from Jaipur, India.
+						Built and launched 2 AI-powered SaaS products using Claude AI, Node.js, PostgreSQL & Razorpay —
+						solo, from scratch.
+					</p>
+					<div class="hero-btns">
+						<a href="#projects" class="btn-primary-grad">View Projects →</a>
+						<a href="https://github.com/mmda1983" target="_blank" class="btn-outline"><i
+								class="fab fa-github"></i> GitHub</a>
+						<a href="https://www.linkedin.com/in/mukesh-tutor-8b630b312" target="_blank"
+							class="btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+					</div>
+				</div>
+				<div class="hero-right">
+					<!-- QueryMind Card -->
+					<div class="tool-card qm">
+						<div class="tool-header">
+							<div class="tool-icon">🧠</div>
+							<div>
+								<div class="tool-name">QueryMind</div>
+								<div style="font-size:11px;color:var(--text-muted);">AI SQL Learning & DB Assistant
 								</div>
 							</div>
+							<div
+								style="margin-left:auto;background:rgba(34,197,94,0.15);color:#22c55e;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">
+								● LIVE</div>
 						</div>
+						<div class="tool-desc">Connect any database, practice SQL with AI, get instant query analysis.
+							Multi-DB support (PostgreSQL, MySQL, MSSQL).</div>
+						<div class="tool-tags">
+							<span class="tag">Claude AI</span>
+							<span class="tag">Node.js</span>
+							<span class="tag">PostgreSQL</span>
+							<span class="tag">Razorpay</span>
+							<span class="tag">PWA</span>
+						</div>
+						<a href="https://querymind.mukeshaitools.com" target="_blank" class="tool-live">🚀 Live Demo
+							→</a>
 					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>More than 5 years of comprehensive experience in the field of teaching, accompanied by a bachelor's degree in IT engineering. 
-									Proficient in data analysis, statistical analysis, hypothesis testing,&amp; customer behaviour analysis. 
-									Demonstrated success in leading impactful projects and providing effective mentorship.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Home Tutor &amp; Analytics</span></li>
-									<!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering in IT</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI</span></li>
-									<li class="d-flex"><span>AI Tools:</span> <span>AI Tools and ChatGPT and SQL using AI</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>C ,C++, ASP.NET-3.5 C#,PHP ,Advance Excel, Power BI Tool, SQL &amp; Python</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Teaching, Meeting Interactive People, Surfing on Net &amp; Doing Meditation</span></li>
-									
-								</ul>
+					<!-- Student Corner Card -->
+					<div class="tool-card sc">
+						<div class="tool-header">
+							<div class="tool-icon">🎓</div>
+							<div>
+								<div class="tool-name">Student Corner</div>
+								<div style="font-size:11px;color:var(--text-muted);">AI Learning Platform for Students
+								</div>
 							</div>
+							<div
+								style="margin-left:auto;background:rgba(34,197,94,0.15);color:#22c55e;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">
+								● LIVE</div>
 						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="5">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/mukesh-tutor-8b630b312?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRbggLP%2B8RseBHtCjUdkrqw%3D%3D" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
+						<div class="tool-desc">AI-powered MCQ practice, World Map learning, Study Plans, Doubt solving
+							with image upload. For NEET, JEE, CAT & more.</div>
+						<div class="tool-tags">
+							<span class="tag">Claude AI</span>
+							<span class="tag">MCQ Engine</span>
+							<span class="tag">World Map</span>
+							<span class="tag">Razorpay</span>
+							<span class="tag">JWT Auth</span>
 						</div>
+						<a href="https://student.mukeshaitools.com" target="_blank" class="tool-live">🚀 Live Demo →</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- STATS -->
+	<div class="stats-bar">
+		<div class="stat">
+			<div class="stat-num">2</div>
+			<div class="stat-label">AI SaaS Products Launched</div>
+		</div>
+		<div class="stat">
+			<div class="stat-num">9+</div>
+			<div class="stat-label">Projects Completed</div>
+		</div>
+		<div class="stat">
+			<div class="stat-num">5+</div>
+			<div class="stat-label">Years Experience</div>
+		</div>
+		<div class="stat">
+			<div class="stat-num">3</div>
+			<div class="stat-label">Tech Stacks Mastered</div>
+		</div>
+	</div>
+
+	<!-- ABOUT -->
+	<section id="about">
+		<div class="section-tag">Who I Am</div>
+		<h2 class="section-title">About Me</h2>
+		<p class="section-sub">Solo developer, builder, and lifelong learner from Jaipur</p>
+		<div class="about-grid">
+			<div class="about-text">
+				<p>I'm a Full Stack Developer & AI SaaS Builder with 5+ years of experience. I recently built and
+					launched 2 complete AI-powered SaaS products — QueryMind and Student Corner — solo, from scratch,
+					with full payment integration and live users.</p>
+				<p>My background spans IT engineering, data analysis, Power BI dashboards, Python analytics, and SQL —
+					and I've recently dived deep into AI development using Claude API, Node.js, and modern web
+					technologies.</p>
+				<p>I believe in learning by building. Every project I take on is a chance to solve a real problem and
+					ship something that actually works.</p>
+				<div class="about-info-grid">
+					<div class="info-item">
+						<div class="info-label">Location</div>
+						<div class="info-value">Jaipur, Rajasthan</div>
+					</div>
+					<div class="info-item">
+						<div class="info-label">Role</div>
+						<div class="info-value">AI SaaS Builder</div>
+					</div>
+					<div class="info-item">
+						<div class="info-label">Email</div>
+						<div class="info-value">mmtutor1983@gmail.com</div>
+					</div>
+					<div class="info-item">
+						<div class="info-label">Status</div>
+						<div class="info-value" style="color:#22c55e;">● Open to Work</div>
 					</div>
 				</div>
 			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Seasoned Home Tutor with 5+ years of experience driving computer courses and customer strategies through data-driven insights. Proven expertise in data analysis, statistical analysis, specially C-programming language and project management.</p>
-          </div>
-        </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2025-Present</span>
-						<h2>Home Tutor</h2>
-						<!-- <span class="position">Merkle</span> -->
-						<p class="mt-4">Since 2010, I have been working as a home tutor, providing computer courses with a focus on programming languages. In addition, from September 2023 to the present, I have been teaching computer courses such as MS Excel, BI Tools, SQL, and Python.							<!-- <ul>
-								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
-								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
-								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
-							</ul> -->
-						</p>
-					</div>
-
-				
-
-				
-			</div>				
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<!-- <span class="date">2014-2018</span> -->
-    					<h2>Bachelor of Engineering in IT</h2>
-    					<span class="position">University Of Rajasthan, Jaipur</span>
-    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<!-- <span class="date">2012-2013</span> -->
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">S.M.D.J.Sr.Sec School, Jaipur</span>
-    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<!-- <p><a href="https://github.com/mmda1983/Resume" class="btn btn-primary py-4 px-5">Download CV</a></p> -->
-					<p><a href="https://raw.githubusercontent.com/mmda1983/Resume/main/Ats-optimized%20Data%20Analyst%20Resume%20%E2%80%93%20Mukesh%20Meena.pdf" download title="Click Here To Download" class="btn btn-primary py-4 px-5">Resume</a>
-					<a href="https://raw.githubusercontent.com/mmda1983/Resume/main/Mukesh_Meena_Data_Analyst_Cover_Letter.pdf" download title="Click Here To Download" class="btn btn-primary py-4 px-5">Cover Letter</a></p>
-				</div>
-    		</div>
-    	</div>
-    </section>
-
-   
-
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI .</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-					<p>Click here to view the project</p>
-				<a href="https://app.powerbi.com/view?r=eyJrIjoiMDg4M2EzMGEtOWRiYS00N2I0LTg1ZGUtMzAwMmJjNjIwOTM3IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9" class="block-20 zoom-effect" style="background-image: url('images/proj_6.png');">
-              	</a>
-              <div class="text mt-3 float-right d-block">
-				<a href="https://github.com/mmda1983/AI-Financial-Dashboard/blob/main/analysis_ai_financial_dashboard.pdf">Visit Report Analysis</a>
-               	<h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/ai_financial_analysis.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-				<h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiMDg4M2EzMGEtOWRiYS00N2I0LTg1ZGUtMzAwMmJjNjIwOTM3IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9">Financial AI Based Dashboard (Power BI)</a></h3>
-                <p>
-Built an interactive finance dashboard to track KPI performance and trends, with drilldowns for variance analysis. Used Power BI AI features such as Decomposition Tree, anomaly detection, and forecasting to explain what’s driving changes and highlight unusual behavior, enabling faster, self-serve insights for stakeholders.
-</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-				<p>Click here to view the project</p>
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiZjcwNmFmNGYtNmIxYy00N2NjLTg5NjItM2IzYjRhMWQ3NTVjIiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9" class="block-20 zoom-effect" style="background-image: url('images/proj_7.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-				<a href="https://github.com/mmda1983/Real-Time-Weather-Live-Dashboard/blob/main/analysis_weather_dashboard.pdf">Visit Report Analysis</a>
-				<h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/weather_analysis.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-                <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiZjcwNmFmNGYtNmIxYy00N2NjLTg5NjItM2IzYjRhMWQ3NTVjIiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9">Real Time Weather Live Dashboard</a></h3>
-                <p>
-A visually rich, real-time weather dashboard displaying current conditions, 3-day forecasts, air quality index, sunrise/sunset times, and key environmental metrics like humidity, wind speed, visibility, and rainfall probability to support quick, location-based weather insights.
-</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-				<p>Click here to view the project</p>
-              <a href="https://github.com/mmda1983/Bank-Loan-Applications-Dashboard-Excel-" class="block-20 zoom-effect" style="background-image: url('images/proj_8.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-				<a href="https://github.com/mmda1983/Bank-Loan-Applications-Dashboard-Excel-/blob/main/analysis_bankloanapplication_excel_dashboard.pdf">Visit Report Analysis</a>
-                <h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/bfd.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-					<!-- <a href="audio/bfd.m4a" download>
-  					⬇ Download Audio
-					</a>	 -->
-				<h3 class="heading"><a href="https://github.com/mmda1983/Bank-Loan-Applications-Dashboard-Excel-">Bank Loan Applications Dashboard (Excel)</a></h3>
-                <p>
-An interactive Excel dashboard analyzing bank loan applications with KPIs for total loans, funded and received amounts, interest rates, and debt-to-income ratio. It provides insights by loan status, term, purpose, employment length, state, and monthly trends to support credit risk and lending decisions.
-</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>		
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <p>Click here to view the project</p>
-				<a href="https://app.powerbi.com/view?r=eyJrIjoiMzBhZWI4MTktY2M0MC00MDk4LWI1Y2QtMGU5YjUxOWM0ODI5IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-				<a href="https://github.com/mmda1983/MobileSalesStore_DashBoard/blob/main/analysis_mobilesalesstores_dashboard.pdf">Visit Report Analysis</a>
-				<h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/mobilesales_analysis.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-                <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBhZWI4MTktY2M0MC00MDk4LWI1Y2QtMGU5YjUxOWM0ODI5IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9">Mobile Sales Store Dashboard</a></h3>
-                <p>
-An interactive sales dashboard analyzing mobile store performance with KPIs for total sales, quantity, transactions, and average price. It provides insights by brand, model, location, payment method, customer ratings, monthly trends, and day-wise sales to support retail and inventory decision-making.
-</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-				<p>Click here to view the project</p>
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiZWFlOGU4YjktYTk0NC00MDEwLWExM2MtZGI1YTRkYzJmNWU0IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-				<a href="https://github.com/mmda1983/HR_DashBoard/blob/main/analysis_hr_dashboard.pdf">Visit Report Analysis</a>
-				<h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/hr_analysis.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-                <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiZWFlOGU4YjktYTk0NC00MDEwLWExM2MtZGI1YTRkYzJmNWU0IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9">HR Data Analytics Dashboard</a></h3>
-                <p>
-An interactive HR analytics dashboard focused on employee attrition, highlighting key metrics such as attrition rate, average age, salary, and tenure. It provides detailed insights by gender, age group, education field, job role, salary range, and years at company to support workforce planning and retention strategies.
-</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-				<p>Click here to view the project</p>
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiMjU0MjYxNTktMmRjNC00M2NmLTk4MDUtY2U3ZGJhNmUzMmQ1IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-				<a href="https://github.com/mmda1983/Sales-DashBoard/blob/main/analysis_technoglobe_sales_dashboard.pdf">Visit Report Analysis</a>
-				<h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/sales_stores_analysis.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-                <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiMjU0MjYxNTktMmRjNC00M2NmLTk4MDUtY2U3ZGJhNmUzMmQ1IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9">Sales Store Dashboard</a></h3>
-                <p>
-A comprehensive sales store dashboard highlighting overall performance through KPIs such as total sales, profit, quantity, and average delivery time. It provides clear insights by region, payment mode, shipping method, customer segment, product category, sub-category, and monthly year-over-year trends to support informed business decisions.
-</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<p>Click here to view the project</p>
-				<a href="https://app.powerbi.com/view?r=eyJrIjoiYzRlNDFiYzAtNDBmMC00OTZmLWEyM2EtYzEzZGY5ODcwMDUxIiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-					<a href="https://github.com/mmda1983/Sales-DashBoard/blob/main/analysis_technoglobe_sales_dashboard.pdf">Visit Report Analysis</a>
-					<h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/Ecommerce_analysis.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-				  <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiYzRlNDFiYzAtNDBmMC00OTZmLWEyM2EtYzEzZGY5ODcwMDUxIiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9">E-Commerce Sales Dashboard</a></h3>
-				  <p>This E-Commerce Performance Dashboard tracks 91K in revenue and 1,973 in profit for XYZ E-Commerce Company. It highlights New Delhi as the top-performing state and identifies Electronics as the highest-selling category by quantity. The analysis reveals significant seasonal profit volatility, with peaks in March and July and losses in January and November, while also noting that Cash on Delivery (40%) remains the dominant payment method.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<p>See here to view the project</p>
-				<a href="https://github.com/mmda1983/Diwali-Sales-Data-Analysis" class="block-20 zoom-effect" > <iframe src="images/DiwaliSalesDA.pdf" width="100%" height="100%" style="border:none;"></iframe>
-				</a>
-				<div class="text mt-3 float-right d-block">
-				    <a href="https://github.com/mmda1983/Diwali-Sales-Data-Analysis/blob/main/DiwaliSalesDA.pdf">Visit Report Analysis</a>
-					<h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/diwali_sales_analysis.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-				  <h3 class="heading"><a href="https://github.com/mmda1983/Diwali-Sales-Data-Analysis">Diwali Sales Data Analysis Project(Using Python)</a></h3>
-				  <p>This project analyzes Diwali sales data to uncover insights about customer behavior, product performance, and sales trends during the festive season. Using Python (Pandas, NumPy, Matplotlib, and Seaborn), the dataset was cleaned, processed, and visualized to identify key patterns.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-					<p>See here to view the project</p>
-				<a href="https://github.com/mmda1983/SQL-Project-On-Online-Book-Store" class="block-20 zoom-effect" > <iframe src="images/SQL_Project_OnLineStore.pdf" width="100%" height="100%" style="border:none;"></iframe>
-				</a>
-				<div class="text mt-3 float-right d-block">
-					<a href="https://github.com/mmda1983/SQL-Project-On-Online-Book-Store">Visit Report Analysis</a>
-					<h3>🎧 Audio Explanation</h3>
-				<audio controls>
-  					<source src="audio/online_bookstore.m4a" type="audio/mp4">
-  					Your browser does not support the audio element.
-					</audio>
-				  <h3 class="heading"><a href="https://github.com/mmda1983/SQL-Project-On-Online-Book-Store">Online Book Store Data Analysis Project(Using SQL)</a></h3>
-				  <p>This project focuses on analyzing sales and customer data from an online book store using SQL. The objective is to gain insights into customer preferences, sales performance, and revenue trends to support business decision-making.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
-
-    </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="9">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="9">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="2600">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="200">0</strong>
-                <span>Cups of tea</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/mmda1983" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
+			<div class="about-highlights">
+				<div class="highlight-card">
+					<div class="highlight-icon">🚀</div>
+					<div>
+						<div class="highlight-title">Launched 2 AI SaaS Products</div>
+						<div class="highlight-desc">QueryMind & Student Corner — both live with Razorpay payments, JWT
+							auth, Claude AI, and real users.</div>
 					</div>
 				</div>
-			<!-- </div> -->
+				<div class="highlight-card">
+					<div class="highlight-icon">📊</div>
+					<div>
+						<div class="highlight-title">Data Analytics Expert</div>
+						<div class="highlight-desc">Power BI dashboards, Python analysis, SQL projects — all published
+							with audio explanations.</div>
+					</div>
+				</div>
+				<div class="highlight-card">
+					<div class="highlight-icon">🤖</div>
+					<div>
+						<div class="highlight-title">Claude AI Developer</div>
+						<div class="highlight-desc">Prompt caching, multi-turn chat, MCQ generation, image analysis —
+							all integrated in production apps.</div>
+					</div>
+				</div>
+				<div class="highlight-card">
+					<div class="highlight-icon">🛠️</div>
+					<div>
+						<div class="highlight-title">Solo Full Stack Builder</div>
+						<div class="highlight-desc">Node.js, Express, Neon PostgreSQL, Vercel, Resend, Sentry — complete
+							production-grade stack.</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
-
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Jaipur(Rajasthan), India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+91-0141-2218021</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">mmtutor1983@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <!-- <p><a href="https://github.com/mmda1983/Resume">resumelink</a></p> -->
-				<p><a href="https://raw.githubusercontent.com/mmda1983/Resume/main/Ats-optimized%20Data%20Analyst%20Resume%20%E2%80%93%20Mukesh%20Meena.pdf" download title="Click Here To Download" >ResumeLink</a></p>
+	<!-- SKILLS -->
+	<div style="background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+		<section id="skills">
+			<div class="section-tag">What I Know</div>
+			<h2 class="section-title">Skills</h2>
+			<p class="section-sub">Technologies I work with daily</p>
+			<div class="skills-grid">
+				<div class="skill-group">
+					<h4>🤖 AI & Claude API</h4>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Claude AI Integration</span><span>90%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:90%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Prompt Engineering</span><span>85%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:85%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Prompt Caching</span><span>80%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:80%"></div>
+						</div>
+					</div>
+				</div>
+				<div class="skill-group">
+					<h4>⚡ Full Stack Dev</h4>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Node.js / Express</span><span>85%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:85%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>JavaScript / HTML / CSS</span><span>80%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:80%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>PostgreSQL / Neon DB</span><span>85%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:85%"></div>
+						</div>
+					</div>
+				</div>
+				<div class="skill-group">
+					<h4>📊 Data Analytics</h4>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Power BI</span><span>88%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:88%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Python (Pandas/Matplotlib)</span><span>80%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:80%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>SQL (Advanced)</span><span>90%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:90%"></div>
+						</div>
+					</div>
+				</div>
+				<div class="skill-group">
+					<h4>🛠️ DevOps & Tools</h4>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Vercel Deployment</span><span>85%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:85%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Git / GitHub</span><span>80%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:80%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-top"><span>Razorpay / Resend / Sentry</span><span>82%</span></div>
+						<div class="skill-bar">
+							<div class="skill-fill" style="width:82%"></div>
+						</div>
+					</div>
+				</div>
 			</div>
-          </div>
-
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<!-- <div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div> -->
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/mukesh-tutor-8b630b312?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRbggLP%2B8RseBHtCjUdkrqw%3D%3D"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="#/"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-				<hr>
-
-<!-- <div style="text-align:center; margin-top:20px; font-size:14px; color:#555;">
-  👀 Total Visitors<br>
-  <img src="https://profile-counter.glitch.me/mmda1983/count.svg" alt="Visitor Counter">
-</div> -->
-<!-- <div style="text-align:center; margin-top:20px;">
-  <img src="https://komarev.com/ghpvc/?username=mmda1983&label=Portfolio+Views&color=0e75b6&style=flat" />
-</div> -->
-<!-- <div style="text-align:center; margin-top:20px;">
-  👀 Total Portfolio Visits<br>
-  <img src="https://profile-counter.glitch.me/mmda1983/count.svg" alt="Visitor Counter">
-</div> -->
-  <!-- ===== Stylish Visitor Counter ===== -->
-  <!-- <div style="text-align:center; margin-top:20px;">
-    <h3>👀 Visitors Count</h3>
-    <span></span>
-  </div> -->
-      <!-- Free Visitor Counter Embed -->
-      <!-- <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7f7c50eb68287b5719b849a3d89c0d3ce6dd6df9'></script>
-      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/7f7c50eb68287b5719b849a3d89c0d3ce6dd6df9/t/0"></script> -->
-		 <!-- <a href='https://free-hit-counters.net/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=ace106aae7fd22f575d42eb1c6f4af60e6b4cc0e'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1487866/t/13"></script>	 -->
-	  <!-- <a href='https://www.counters-free.net/'>Hit Counters free</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7f7c50eb68287b5719b849a3d89c0d3ce6dd6df9'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1487860/t/13"></script> -->
-	
-	<!-- https://script.google.com/macros/s/AKfycbyJC-EFCPZ5FouJxFPjtpZzxXOMcNgsM9SmwsCAfE-3xWq6xL_w4C03gOxjPj4ZhCqh/exec	 -->
-		<div style="text-align:center; margin-top:20px;">
-  <!-- <h1>🟢 Live Now:</h1> -->
-   <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-	<li class="ftco-animate normal-txt"><h1>🟢 Live Now: </h1> </li>
-   <li>
-  <div id="liveUsers" style="font-size:34px; font-weight:bold; color:#ffc107;">
-    Loading...
-  </div></li></ul></div>
-  <!-- <div id="liveUsers" style="text-align:center; margin-top:20px;">🟢 Live Now: </div> -->
-
-
-
-		<script>
-async function fetchLiveUsers(){
-  try{
-    const res = await fetch("https://script.google.com/macros/s/AKfycbx-rwFQr9tInkfg1PBysGbqF9XApXQKQDd8fTDV3Q8VmfQUvtUhChjAqIVWF0Gg75-s/exec");
-    const data = await res.json();
-
-    document.getElementById("liveUsers").innerText =
-      data.rows?.[0]?.metricValues?.[0]?.value || 0;
-
-  }catch(err){
-    document.getElementById("liveUsers").innerText = "—";
-  }
-}
-
-fetchLiveUsers();
-setInterval(fetchLiveUsers, 10000);
-</script>
-	<!-- </div>
-	
-	<div id="totalVisitors">👀 Total Visitors: Loading...</div> -->
-			<div style="text-align:center; margin-top:20px;">
-  <!-- <h1>🟢 Live Now:</h1> -->
-   <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-	<li class="ftco-animate normal-txt"><h1>👀Total Visitors:</h1> </li>
-   <li>
-  <div id="totalUsers" style="font-size:34px; font-weight:bold; color:#ffc107;">
-    Loading...
-  </div></li></ul></div>
-<!-- <h3>
-  👀 Total Visitors: <span id="totalUsers">Loading...</span>
-</h3> -->
-
-<script>
-fetch("https://script.google.com/macros/s/AKfycbyOKEGr29pqhdqaUtob6YQabDZAMbzDyxhL8j8876dFScHSTH3UoqTR050E9NYqfW6Q/exec")
-  .then(response => response.json())
-  .then(data => {
-    console.log("DATA:", data); // debug
-    document.getElementById("totalUsers").innerText = data.totalUsers;
-  })
-  .catch(error => {
-    console.error(error);
-    document.getElementById("totalUsers").innerText = "Error";
-  });
-</script>
-
-
+		</section>
 	</div>
- </section>
 
+	<!-- PROJECTS -->
+	<section id="projects">
+		<div class="section-tag">My Work</div>
+		<h2 class="section-title">Projects</h2>
+		<p class="section-sub">AI SaaS products + Data Analytics projects</p>
+		<div class="projects-grid">
 
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			<!-- QM -->
+			<div class="project-card">
+				<div class="project-img saas-qm">
+					<div style="text-align:center;">
+						<div style="font-size:48px;">🧠</div>
+						<div
+							style="font-size:12px;color:var(--qm-light);margin-top:8px;font-family:'Fira Code',monospace;">
+							SELECT * FROM intelligence;</div>
+					</div>
+				</div>
+				<div class="project-body">
+					<div class="project-type" style="color:var(--qm-light);">AI SAAS — LIVE</div>
+					<div class="project-title">QueryMind — AI SQL Assistant</div>
+					<div class="project-desc">Connect any DB, practice SQL with AI guidance, analyze queries. Multi-DB
+						(PG/MySQL/MSSQL), PWA, JWT auth, Razorpay payments.</div>
+					<div class="project-links">
+						<a href="https://querymind.mukeshaitools.com" target="_blank"
+							class="project-link link-primary">🚀 Live Demo</a>
+						<a href="https://github.com/mmda1983" target="_blank"
+							class="project-link link-secondary">GitHub</a>
+					</div>
+				</div>
 			</div>
-		  </div>
+
+			<!-- SC -->
+			<div class="project-card">
+				<div class="project-img saas-sc">
+					<div style="text-align:center;">
+						<div style="font-size:48px;">🎓</div>
+						<div
+							style="font-size:12px;color:var(--sc-light);margin-top:8px;font-family:'Fira Code',monospace;">
+							AI.learn(student, topic);</div>
+					</div>
+				</div>
+				<div class="project-body">
+					<div class="project-type" style="color:var(--sc-light);">AI SAAS — LIVE</div>
+					<div class="project-title">Student Corner — AI Learning Platform</div>
+					<div class="project-desc">MCQ practice, World Map GK, Study Plans, Doubt solving with image upload.
+						NEET/JEE/CAT/GATE ready. Full auth + payments.</div>
+					<div class="project-links">
+						<a href="https://student.mukeshaitools.com" target="_blank" class="project-link link-sc">🚀 Live
+							Demo</a>
+						<a href="https://github.com/mmda1983" target="_blank"
+							class="project-link link-secondary">GitHub</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Power BI Financial -->
+			<div class="project-card">
+				<div class="project-img powerbi">
+					<div style="font-size:48px;">📊</div>
+				</div>
+				<div class="project-body">
+					<div class="project-type" style="color:#f59e0b;">POWER BI DASHBOARD</div>
+					<div class="project-title">AI Financial Dashboard</div>
+					<div class="project-desc">Interactive financial analytics dashboard with KPIs, trend analysis, and
+						AI-powered insights using Power BI.</div>
+					<div class="project-links">
+						<a href="https://app.powerbi.com/view?r=eyJrIjoiMDg4M2EzMGEtOWRiYS00N2I0LTg1ZGUtMzAwMmJjNjIwOTM3IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9"
+							target="_blank" class="project-link link-primary">View Dashboard</a>
+						<a href="https://github.com/mmda1983/AI-Financial-Dashboard/blob/main/analysis_ai_financial_dashboard.pdf"
+							target="_blank" class="project-link link-secondary">Report</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Power BI HR -->
+			<div class="project-card">
+				<div class="project-img powerbi">
+					<div style="font-size:48px;">👥</div>
+				</div>
+				<div class="project-body">
+					<div class="project-type" style="color:#f59e0b;">POWER BI DASHBOARD</div>
+					<div class="project-title">HR Analytics Dashboard</div>
+					<div class="project-desc">Comprehensive HR metrics dashboard tracking employee performance,
+						attrition, and workforce analytics.</div>
+					<div class="project-links">
+						<a href="https://app.powerbi.com/view?r=eyJrIjoiZWFlOGU4YjktYTk0NC00MDEwLWExM2MtZGI1YTRkYzJmNWU0IiwidCI6IjQ3OTFjN2M2LWZlNjMtNDBkYy1iNGIwLTJkYWY2MTQ5NjI0NCJ9"
+							target="_blank" class="project-link link-primary">View Dashboard</a>
+						<a href="https://github.com/mmda1983/HR_DashBoard/blob/main/analysis_hr_dashboard.pdf"
+							target="_blank" class="project-link link-secondary">Report</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Python Diwali -->
+			<div class="project-card">
+				<div class="project-img python">
+					<div style="font-size:48px;">🪔</div>
+				</div>
+				<div class="project-body">
+					<div class="project-type" style="color:#22c55e;">PYTHON ANALYTICS</div>
+					<div class="project-title">Diwali Sales Data Analysis</div>
+					<div class="project-desc">Festive sales analysis using Python (Pandas, NumPy, Matplotlib, Seaborn)
+						to uncover customer behavior and product trends.</div>
+					<div class="project-links">
+						<a href="https://github.com/mmda1983/Diwali-Sales-Data-Analysis" target="_blank"
+							class="project-link link-primary">GitHub</a>
+						<a href="https://github.com/mmda1983/Diwali-Sales-Data-Analysis/blob/main/DiwaliSalesDA.pdf"
+							target="_blank" class="project-link link-secondary">Report</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- SQL Bookstore -->
+			<div class="project-card">
+				<div class="project-img sql">
+					<div style="font-size:48px;">📚</div>
+				</div>
+				<div class="project-body">
+					<div class="project-type" style="color:#f87171;">SQL PROJECT</div>
+					<div class="project-title">Online Book Store Analysis (SQL)</div>
+					<div class="project-desc">Deep-dive SQL analysis of online bookstore sales, customer preferences,
+						and revenue trends to support business decisions.</div>
+					<div class="project-links">
+						<a href="https://github.com/mmda1983/SQL-Project-On-Online-Book-Store" target="_blank"
+							class="project-link link-primary">GitHub</a>
+						<a href="https://github.com/mmda1983/SQL-Project-On-Online-Book-Store" target="_blank"
+							class="project-link link-secondary">Report</a>
+					</div>
+				</div>
+			</div>
+
 		</div>
-	  </footer>
+		<div style="text-align:center;margin-top:40px;">
+			<a href="https://github.com/mmda1983" target="_blank" class="btn-primary-grad">View All on GitHub →</a>
+		</div>
+	</section>
 
+	<!-- CONTACT -->
+	<div style="background:var(--bg2); border-top:1px solid var(--border);">
+		<section id="contact">
+			<div class="section-tag">Get In Touch</div>
+			<h2 class="section-title">Contact Me</h2>
+			<p class="section-sub">Open to freelance, full-time, and collaboration opportunities</p>
+			<div class="contact-grid">
+				<div class="contact-info">
+					<div class="contact-item">
+						<div class="contact-icon email"><i class="fas fa-envelope"></i></div>
+						<div>
+							<div class="contact-label">Email</div><a href="mailto:mmtutor1983@gmail.com"
+								class="contact-val">mmtutor1983@gmail.com</a>
+						</div>
+					</div>
+					<div class="contact-item">
+						<div class="contact-icon phone"><i class="fas fa-phone"></i></div>
+						<div>
+							<div class="contact-label">Phone</div><a href="tel:+910141*******"
+								class="contact-val">+91-0141-*******</a>
+						</div>
+					</div>
+					<div class="contact-item">
+						<div class="contact-icon linkedin"><i class="fab fa-linkedin"></i></div>
+						<div>
+							<div class="contact-label">LinkedIn</div><a
+								href="https://www.linkedin.com/in/mukesh-tutor-8b630b312" target="_blank"
+								class="contact-val">Mukesh Meena</a>
+						</div>
+					</div>
+					<div class="contact-item">
+						<div class="contact-icon github"><i class="fab fa-github"></i></div>
+						<div>
+							<div class="contact-label">GitHub</div><a href="https://github.com/mmda1983" target="_blank"
+								class="contact-val">github.com/mmda1983</a>
+						</div>
+					</div>
+				</div>
+				<div class="resume-box">
+					<div style="font-size:48px;margin-bottom:16px;">📄</div>
+					<h3>Download Resume & Cover Letter</h3>
+					<p>ATS-optimized Data Analyst Resume with full project portfolio</p>
+					<div class="resume-btns">
+						<a href="https://raw.githubusercontent.com/mmda1983/Resume/main/Ats-optimized%20Data%20Analyst%20Resume%20%E2%80%93%20Mukesh%20Meena.pdf"
+							download class="resume-btn primary"><i class="fas fa-download"></i> Resume</a>
+						<a href="https://raw.githubusercontent.com/mmda1983/Resume/main/Mukesh_Meena_Data_Analyst_Cover_Letter.pdf"
+							download class="resume-btn secondary"><i class="fas fa-file-alt"></i> Cover Letter</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+	<!-- FOOTER -->
+	<footer>
+		<p>Built with ❤️ by <span class="footer-grad">Mukesh Meena</span> — AI SaaS Builder from Jaipur</p>
+		<p style="margin-top:8px;">
+			<a href="https://querymind.mukeshaitools.com" target="_blank"
+				style="color:var(--qm-light);text-decoration:none;margin:0 12px;">QueryMind</a>
+			<a href="https://student.mukeshaitools.com" target="_blank"
+				style="color:var(--sc-light);text-decoration:none;margin:0 12px;">Student Corner</a>
+			<a href="https://www.mukeshaitools.com" target="_blank"
+				style="color:var(--text-muted);text-decoration:none;margin:0 12px;">mukeshaitools.com</a>
+		</p>
+	</footer>
 
+	<script>
+		// Typing animation
+		const texts = ['AI SaaS Builder', 'Full Stack Developer', 'SQL & Data Expert', 'Claude AI Developer', 'Problem Solver'];
+		let ti = 0, ci = 0, del = false;
+		const el = document.getElementById('typing');
+		function type() {
+			const t = texts[ti];
+			if (!del) {
+				el.textContent = '$ ' + t.slice(0, ++ci) + '_';
+				if (ci === t.length) { del = true; setTimeout(type, 1800); return; }
+			} else {
+				el.textContent = '$ ' + t.slice(0, --ci) + '_';
+				if (ci === 0) { del = false; ti = (ti + 1) % texts.length; }
+			}
+			setTimeout(type, del ? 50 : 100);
+		}
+		type();
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+		// Skill bar animation on scroll
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(e => {
+				if (e.isIntersecting) {
+					e.target.querySelectorAll('.skill-fill').forEach(b => {
+						b.style.width = b.style.width;
+					});
+				}
+			});
+		});
+		document.querySelectorAll('.skill-group').forEach(g => observer.observe(g));
+	</script>
+</body>
+
 </html>
