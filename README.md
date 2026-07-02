@@ -49,6 +49,10 @@
 | Diwali Sales Analysis | Python | [GitHub](https://github.com/mmda1983/Diwali-Sales-Data-Analysis) |
 | Online Book Store Analysis | SQL | [GitHub](https://github.com/mmda1983/SQL-Project-On-Online-Book-Store) |
 
+## 🚀 Live Projects
+
+- **[QueryMind](https://querymind.mukeshaitools.com)** — AI-powered SQL learning & database assistant
+- **[Student Corner](https://student.mukeshaitools.com)** — AI study companion for Indian students (NEET, JEE, CAT, GATE & more)
 ---
 
 ## 🛠️ Tech Stack
